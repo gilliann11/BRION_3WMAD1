@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shooting Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="startScreen">
+    <h1>Shooting Game</h1>
+    <p>Select Difficulty:</p>
+    <button onclick="startGame('easy')">Easy</button>
+    <button onclick="startGame('normal')">Normal</button>
+    <button onclick="startGame('hard')">Hard</button>
+    <div id="tutorial">
+      <p>How to Play:</p>
+      <p>Use <strong>Left</strong> and <strong>Right Arrow</strong> keys to move.</p>
+      <p>Press <strong>Spacebar</strong> to shoot.</p>
+      <p>Destroy red enemies to earn points!</p>
+    </div>
+  </div>
+  <div id="losePopup">
+    <div>You Lose!<br>Your score was: <span id="finalScore"></span></div>
+    <button onclick="reloadGame()">Restart</button>
+  </div>
+  <button id="pauseBtn" onclick="togglePause()">Pause</button>
+  <canvas id="gameCanvas"></canvas>
+
+  <script src="script.js"></script>
+  <script src="service-worker.js"></script>
+</body>
+</html>
